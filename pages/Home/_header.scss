@@ -1,0 +1,150 @@
+.header{
+    background-color: #59697A;
+  &__nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    &__logo{
+        padding: 16px 19px;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border: 5px solid white;
+        border-radius: 0px 40px 40px 0px;
+    }
+    &__logo2{
+        display: none;
+    }
+
+    &__items{
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        &__item a{
+            padding-bottom: 10px;
+            color: white;
+            font-family: 'Semibold';
+            text-transform: uppercase;
+            
+        }
+        &__item:hover a{
+            color: pink;
+            border-bottom: 3px solid white;
+        }
+    }
+
+    &__box{
+        padding-right: 40px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+
+        &__registration{
+            padding: 8px 17px;
+            border: 3px solid #fff;
+            border-radius: 4px;
+            transition: 0.2s;
+
+            
+        }
+        &__registration a{
+            color: #fff;
+            font-family: 'Medium';
+        }
+
+        &__circle{
+            border: 3px solid #fff;
+            border-radius: 50%;
+            transition: 0.2s;
+        }
+
+        
+        &__circle a{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            width: 40px;
+            height: 40px;
+            color: white;
+        }
+
+        
+
+        &__circle:hover,
+        &__registration:hover{
+            background-color: #fff;
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+        }
+
+        &__circle:active,
+        &__registration:active{
+            background-color: #59697A;
+            box-shadow: none;
+        }
+
+        &__circle:hover a,
+        &__registration:hover a
+        {
+            color: #000;
+            
+        }
+    }
+  }  
+}
+
+
+
+
+
+
+@media screen and(max-width:1200px) {
+    .header{
+        background-color: #fff;
+    }
+    .header__nav__items{
+        display: none;
+    }
+    .header__nav__box__circle{
+        border: 1px solid #318EB4;
+    }
+    .header__nav__box__circle a{
+        color: #333333;
+    }
+    .header__nav__box__registration{
+        border: 1px solid #318EB4;
+
+        
+    }
+    .header__nav__box__registration a{
+        color: #333333;
+    }
+    
+}
+
+@media screen and(max-width:600px) {
+    .header__nav__logo{
+        display: none;
+    }
+    .header__nav__logo2{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    .header__nav__box{
+        padding: 0;
+    }
+    .header__nav{
+        padding: 16px;
+    }
+    .header__nav__box__registration{
+        display: none;
+    }
+    .header__nav__logo{
+
+        padding: 0;
+        border: none;
+        border-radius: 0;
+    }
+}
